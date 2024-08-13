@@ -1,0 +1,83 @@
+/* Utilizado para o esconder display imediato de informações*/
+.hide {
+    display: none;
+}
+
+/* Estilização do card central ->*/
+.card {
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #cad0d6;
+    border-bottom: 1.2px groove #131212;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-body {
+    font-size: 14px;
+}
+
+.status-gif {
+    width: 50px;
+    height: auto;
+    cursor: pointer
+}
+
+.text-box {
+    background-color: rgb(148, 148, 136);
+    border: 1px solid #ccc;
+    padding: 2px;
+    margin-top: 10px;
+    display: none;
+}
+
+.input-icon {
+    cursor: pointer;
+}
+
+.status-gif:hover+.hide {
+    display: block;
+    color: red;
+}
+
+/* Barra de navegação e ícones */
+
+.navbar {
+    background-color: #00000f;
+}
+
+.navbar-brand {
+    color: rgb(52, 104, 216) !important;
+    font-weight: bold;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    display: none;
+    
+}
+
+.navbar-nav {
+    flex-direction: column;
+    text-align: left;
+}
+
+.nav-item a {
+    color: rgb(253, 253, 253) !important;
+    padding-left: 20px;
+}
+
+/* All rights reserved icon edit */
+.trademark {
+    font-size: 20px;
+    vertical-align: super;
+}
