@@ -1,0 +1,62 @@
+<!--Corpo do documento, onde vai entrar todos os dados e comportamentos-->
+<!--Cor da grendene: style: "background-color:rgba(100, 154, 210, 1)"-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="General_stylesheet.css">
+
+<body style="background-color:rgba(100, 154, 210, 1)">
+    <nav class="navbar navbar-expand-lg navbar-dark" id="sidebar">
+        <a class="navbar-brand" href="/Synaptical_Bu/Synaptical_Bu/root.html">
+            <h2>GRENDENE<span class="trademark">&#174;</span></h2>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-brand">GRENDENE</span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav text-center">
+                <li class="nav-item">
+                    <a class="nav-link" class="active" href="Factory_01.html">Factory 01</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Factory_02.html">Factory 02</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="factoryDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Factory 03A
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="factoryDropdown">
+                        <a class="dropdown-item" href="Factories\Factory_03B.html">Factory 03B</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Factory_04.html">Factory 04</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Factory_05.html">Factory 05</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Factory_06.html">Factory 06</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Factory_07.html">Factory 07</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Factory_08.html">Factory 08</a>
+                </li>
+            </ul>
+        </div>
+        <button class="btn btn-primary login-btn">
+            <!-- Espaço para o logon do usuário -->
+            <i class="fas fa-sign-in-alt"></i> Login
+        </button>
+    </nav>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(function(){
+          $("#nav-placeholder").load("nav.html");
+        });
+        </script>
+</body>

@@ -1,0 +1,154 @@
+<!--Definição de HTML, obrigatório inclusão-->
+<!DOCTYPE html>
+<html lang="en">
+<!--Definição de HTML, obrigatório inclusão-->
+<!----->
+<!--<head> Refere-se a metadados, ou seja, dados sobre dados. São esses dados que são retornados ao se buscar em motores/intranets-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipamentos Fábrica 01</title>
+    <!--Carrega Dados de estilização (CSS e UX para o documento. Bootstrap é uma biblioteca famosa com funções úteis, já stylesheet é a padronização do equipamento)-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="General_stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!--Carrega Dados de estilização (CSS e UX para o documento. Bootstrap é uma biblioteca famosa com funções úteis, já stylesheet é a padronização do equipamento)-->
+</head>
+<!--Corpo do documento, onde vai entrar todos os dados e comportamentos-->
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" id="sidebar">
+        <a class="navbar-brand" href="/Synaptical_Bu/Synaptical_Bu/root.html">
+            <h2>GRENDENE<span class="trademark">&#174;</span></h2>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-brand">GRENDENE</span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav text-center">
+                <li class="nav-item">
+                    <a class="nav-link" class="active" href="Factory_01.html">Factory 01</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Factory_02.html">Factory 02</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="factoryDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Factory 03
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="factoryDropdown">
+                        <a class="dropdown-item" href="Factory_03A.html">Factory 03A</a>
+                        <a class="dropdown-item" href="Factory_03B.html">Factory 03B</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Factory_04.html">Factory 04</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Factory_05.html">Factory 05</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Factory_06.html">Factory 06</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Factory_07.html">Factory 07</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Factory_08.html">Factory 08</a>
+                </li>
+            </ul>
+        </div>
+        <button class="btn btn-primary login-btn">
+            <!-- Espaço para o logon do usuário -->
+            <i class="fas fa-sign-in-alt"></i> Login
+        </button>
+    </nav>
+    <div class="image-container-fab03B">
+        <img src="../Factories/Factories_Mapping_Img_DB/Factory3B_Mocked_Icons_Final_Version.png" alt="Fact_03"
+            class="centered-image-fab03b" usemap="#image-map">
+
+
+        <map name="image-map">
+            <area target="_self" alt="S3-BACC-008" title="S3-BACC-008" href="#" coords="109,198,68,146" shape="rect" data-toggle="modal" data-target="#popupModal">
+            <area target="_self" alt="S3-BACC-007" title="S3-BACC-007" href="#" coords="133,145,172,196" shape="rect" data-toggle="modal" data-target="#popupModal">
+            <area target="_self" alt="S3-BACC-009" title="S3-BACC-009" href="#" coords="193,143,231,196" shape="rect" data-toggle="modal" data-target="#popupModal">
+            <area target="_self" alt="S3-TORR-009" title="S3-TORR-009" href="#" coords="258,48,388,230" shape="rect" data-toggle="modal" data-target="#popupModal">
+            <area target="_self" alt="S3-TORR-010" title="S3-TORR-010" href="#" coords="481,48,608,229" shape="rect" data-toggle="modal" data-target="#popupModal">
+            <area target="_self" alt="S3-BACI-005" title="S3-BACI-005" href="#" coords="660,133,712,188" shape="rect" data-toggle="modal" data-target="#popupModal">
+            <area target="_self" alt="S3-BACI-006" title="S3-BACI-006" href="#" coords="727,135,770,189" shape="rect" data-toggle="modal" data-target="#popupModal">
+            <area target="_self" alt="S3-CHIL-004" title="S3-CHIL-004" href="#" coords="470,385,632,556" shape="rect" data-toggle="modal" data-target="#popupModal">
+            <area target="_self" alt="S3-BAGC-009" title="S3-BAGC-009" href="#" coords="775,388,832,418" shape="rect" data-toggle="modal" data-target="#popupModal">
+            <area target="_self" alt="S3-BAGC-010" title="S3-BAGC-010" href="#" coords="775,443,830,474" shape="rect" data-toggle="modal" data-target="#popupModal">
+            <area target="_self" alt="S3-BAGC-012" title="S3-BAGC-012" href="#" coords="780,535,829,565" shape="rect" data-toggle="modal" data-target="#popupModal">
+            <area target="_self" alt="S3-BAGI-005" title="S3-BAGI-005" href="#" coords="962,406,1020,438" shape="rect" data-toggle="modal" data-target="#popupModal">
+            <area target="_self" alt="S3-BAGI-004" title="S3-BAGI-004" href="#" coords="963,468,1020,498" shape="rect" data-toggle="modal" data-target="#popupModal">
+            <area target="_self" alt="S3-BAGI-003" title="S3-BAGI-003" href="#" coords="966,532,1021,563" shape="rect" data-toggle="modal" data-target="#popupModal">
+            <area target="_self" alt="TANQUE-AGUA-GELADA" title="TANQUE-AGUA-GELADA" href="#" coords="842,384,956,582" shape="rect" data-toggle="modal" data-target="#popupModal">
+        </map>
+    </div>
+    <div id="popupModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div id="popupModal" class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <span>Machine Identification</span>
+                                            <img src="https://cdn.icon-icons.com/icons2/2446/PNG/512/edit_text_icon_148716.png"
+                                                alt="Edit Icon" class="input-icon" id="editIcon" width="30" height="30">
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between">
+                                                <span><strong>Name:</strong></span>
+                                                <span>Machine X-123</span>
+                                            </div>
+                                            <div class="d-flex justify-content-between mt-2">
+                                                <span><strong>Repair Emergency Class:</strong></span>
+                                                <span>High</span>
+                                                <div class="hide">I am shown when someone hovers over the div above.
+                                                </div>
+                                            </div>
+                                            <div class="d-flex justify-content-between mt-2">
+                                                <span><strong>Tag:</strong></span>
+                                                <span>#00123</span>
+                                            </div>
+                                            <div class="d-flex justify-content-between mt-2">
+                                                <span><strong>Schedule:</strong></span>
+                                                <span>Daily at 10:00 AM</span>
+                                            </div>
+                                            <div class="text-box" id="text-box">
+                                                <textarea class="form-control" rows="3"
+                                                    placeholder="Enter your input here..."></textarea>
+                                            </div>
+                                            <div class="text-right mt-3">
+                                                <img src="https://spartakpd.info/images/nav/breaking_25.gif"
+                                                    alt="Blinking Red Light" class="status-gif">
+                                                <div class="hide">O equipamento necessita de agendamento de manutenção
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/Synaptical_Bu/Synaptical_Bu/information_input.js"></script>
+    <script src="General_Factory_control.js"></script>
+</body>

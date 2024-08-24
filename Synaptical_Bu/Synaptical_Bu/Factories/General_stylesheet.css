@@ -1,0 +1,260 @@
+/* Utilizado para o esconder display imediato de informações*/
+.hide {
+    display: none;
+}
+/*Background color */
+body {
+    background: linear-gradient(120deg, #6f89a5, #d6dbe0); /* Define o gradiente aqui */
+    background-attachment: fixed; /* Faz o fundo ficar fixo ao rolar a página */
+}
+/* Estilização do card central -> POP-UP*/
+.card {
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #cad0d6;
+    border-bottom: 1.2px groove #131212;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-body {
+    font-size: 14px;
+}
+
+.status-gif {
+    width: 50px;
+    height: auto;
+    cursor: pointer
+}
+
+.caixa_texto {
+    background-color: rgb(148, 148, 136);
+    border: 1px solid #ccc;
+    padding: 2px;
+    margin-top: 10px;
+    display: none;
+}
+
+.input-icon {
+    cursor: pointer;
+}
+
+.status-gif:hover+.hide {
+    display: block;
+    color: red;
+}
+
+/* Utilizado para o esconder display imediato de informações*/
+.hide {
+    display: none;
+}
+
+/* Estilização do card central ->*/
+.card {
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #cad0d6;
+    border-bottom: 1.2px groove #131212;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-body {
+    font-size: 14px;
+}
+
+.status-gif {
+    width: 50px;
+    height: auto;
+    cursor: pointer
+}
+
+.text-box {
+    background-color: rgb(148, 148, 136);
+    border: 1px solid #ccc;
+    padding: 2px;
+    margin-top: 10px;
+    display: none;
+}
+
+.input-icon {
+    cursor: pointer;
+}
+
+.status-gif:hover+.hide {
+    display: block;
+    color: red;
+}
+
+/* Barra de navegação, ícones internos dela e customização de textos*/
+
+.navbar {
+    background-color: #000000;
+    border-style:ridge;
+    border-bottom-color: #cad0d6;
+}
+
+.navbar-brand {
+    color: rgba(100, 154, 210, 1) !important;
+    font-weight: bold;
+    font-family: 'fangsong', Meiryo, sans-serif;
+    align-items: center;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    display: none;
+    
+}
+
+.navbar-nav {
+    flex-direction: auto;
+    text-align: auto;
+    margin-left: -120px;
+}
+
+.nav-item a {
+    font-size: 1.3rem; /* Tamanho da fonte */
+    font-family: Georgia, serif !important; /* Fonte padrão, pode ser alterada */
+    font-weight: 500; /* Peso da fonte, para dar mais destaque */
+    color: #d8d8d8 !important; /* Cor branca */
+    text-transform: Capitalize; /* Deixar o texto em maiúsculas */
+    padding-left: 20px; /* Adicionar espaço à esquerda de cada link */
+    padding-right: 20px; /* Adicionar espaço à direita de cada link */
+}
+.nav-item .nav-link:hover {
+    color: rgba(100, 154, 210, 1) !important; /* Cor amarela ao passar o mouse */
+    text-decoration: none;
+}
+/* Tentativa de "permanência na página"*/
+.navbar-nav .nav-item.active {
+    background-color: rgb(44, 43, 6); 
+    border-radius: 5px; 
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: white; 
+}
+
+.navbar-nav .nav-item.active .nav-link {
+    color: #000; 
+    font-weight: 700; 
+}
+/* Dropdown da fábrica 03 */
+.navbar-nav .dropdown-menu {
+    background-color: #000000; /* Same background color as the navbar */
+    border: none;
+    text-align: center;
+}
+
+.navbar-nav .dropdown-item {
+    color: #ffffff; /* Consistent font color */
+}
+
+.navbar-nav .dropdown-item:hover {
+    background-color: rgba(100, 154, 210, 1) /* Optional: Highlight on hover */
+}
+/* Tentativa */
+
+/* All rights reserved icon edit */
+.trademark {
+    font-size: 20px;
+    vertical-align: super;
+}
+
+/* Centralização da fábrica em um container bootstrap */
+
+.image-container {
+    margin-top: 70px; 
+    margin-left:70px;
+    display: flex;
+    justify-content: center; /* Centraliza a imagem horizontalmente */
+    align-items: center; /* Centraliza a imagem verticalmente, caso necessário */ 
+}
+.image-container-Fab02{
+    margin-top: 150px; 
+    margin-left:70px;
+    display: flex;
+    justify-content: center; /* Centraliza a imagem horizontalmente */
+    align-items: center; /* Centraliza a imagem verticalmente, caso necessário */ 
+}
+.image-container-fab03a {
+    margin-top: 30px; 
+    display: flex;
+    justify-content: center; /* Centraliza a imagem horizontalmente */
+    align-items: center; /* Centraliza a imagem verticalmente, caso necessário */ 
+
+}
+
+.image-container-fab03B {
+    margin-top: 70px; 
+    margin-left:70px;
+    display: flex;
+    justify-content: center; /* Centraliza a imagem horizontalmente */
+    align-items: center; /* Centraliza a imagem verticalmente, caso necessário */ 
+}
+.image-container-fab04 {
+    margin-top: 40px; 
+    margin-left:70px;
+    display: flex;
+    justify-content: center; /* Centraliza a imagem horizontalmente */
+    align-items: center; /* Centraliza a imagem verticalmente, caso necessário */ 
+}
+.image-container-fab05 {
+    margin-top: 7.5px; 
+    margin-left:70px;
+    display: flex;
+    justify-content: center; /* Centraliza a imagem horizontalmente */
+    align-items: center; /* Centraliza a imagem verticalmente, caso necessário */ 
+}
+.image-container-fab08{
+    margin-top: 20px; 
+    margin-left:70px;
+    display: flex;
+    justify-content: center; /* Centraliza a imagem horizontalmente */
+    align-items: center; /* Centraliza a imagem verticalmente, caso necessário */ 
+}
+
+/* Estilo da imagem sinóptica */
+.centered-image {
+    width: auto;
+    height: auto;
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura da tela */
+    max-height: 100vh; /* Garante que a imagem não ultrapasse a altura da tela */
+}
+
+/* Estilização Login */
+.login-btn {
+    background-color: #000000 !important; 
+    border: none; 
+    color: rgb(245, 243, 243) !important;
+    font-size: 1.1rem; 
+    padding: 10px 20px; 
+    border-radius: 30px; 
+    transition: background-color 1s ease; 
+}
+
+.login-btn i {
+    margin-right: 8px; /
+}
+
+.login-btn:hover {
+    color: rgba(100, 154, 210, 1) !important; 
+}
+/* Remove o contorno pontilhado específico do Firefox (deu certo n)*/
+area::-moz-focus-inner { border: 0; }
