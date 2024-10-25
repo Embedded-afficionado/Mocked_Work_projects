@@ -1,0 +1,148 @@
+<!--Definição de HTML, obrigatório inclusão-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<!--Definição de HTML, obrigatório inclusão-->
+<!----->
+<!--<head> Refere-se a metadados, ou seja, dados sobre dados. São esses dados que são retornados ao se buscar em motores/intranets-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipamentos Fábrica 03B</title>
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <!--Carrega Dados de estilização (CSS e UX para o documento. Bootstrap é uma biblioteca famosa com funções úteis, já stylesheet é a padronização do equipamento)-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/General_stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!--Carrega Dados de estilização (CSS e UX para o documento. Bootstrap é uma biblioteca famosa com funções úteis, já stylesheet é a padronização do equipamento)-->
+</head>
+<!--Corpo do documento, onde vai entrar todos os dados e comportamentos-->
+
+<body>
+    <div id="navbar-container"></div>
+
+    <div class="image-container-fab03B">
+        <img src="images/imagem_final_3B.gif" alt="Fact_03" class="centered-image-fab03b" usemap="#image-map">
+
+
+        <map name="image-map">
+            <area target="_self" alt="S3-BACC-008" title="S3-BACC-008" href="#" coords="149,65,237,125" shape="rect" 
+            data-name="S3-BACC-008" data-class="B" data-tag="CAPTURAR DEPOIS" data-toggle="modal" data-target="#popupModal">
+
+            <area target="_self" alt="S3-BACC-007" title="S3-BACC-007" href="#" coords="151,129,241,185" shape="rect"
+            data-name="S3-BACC-007" data-class="B" data-tag="CAPTURAR DEPOIS" data-toggle="modal" data-target="#popupModal">
+            
+            <area target="_self" alt="S3-BACC-009" title="S3-BACC-009" href="#" coords="148,192,241,245" shape="rect"
+            data-name="S3-BACC-009" data-class="B" data-tag="CAPTURAR DEPOIS" data-toggle="modal" data-target="#popupModal">
+
+            <area target="_self" alt="S3-TORR-009" title="S3-TORR-009" href="#" coords="261,48,401,247" shape="rect"
+            data-name="S3-TORR-009" data-class="B" data-tag="125/4-SCG-II-E " data-toggle="modal" data-target="#popupModal">
+
+            <area target="_self" alt="S3-TORR-010" title="S3-TORR-010" href="#" coords="480,48,625,252" shape="rect"
+            data-name="S3-TORR-010" data-class="B" data-tag="125/4-SCG-II-E " data-toggle="modal" data-target="#popupModal">
+
+            <area target="_self" alt="S3-BACI-005" title="S3-BACI-005" href="#" coords="635,108,723,168" shape="rect"
+            data-name="S3-BACI-005" data-class="B" data-tag="CAPTURAR DEPOIS" data-toggle="modal" data-target="#popupModal">
+
+            <area target="_self" alt="S3-BACI-006" title="S3-BACI-006" href="#" coords="639,175,727,230" shape="rect"
+            data-name="S3-BACI-006" data-class="B" data-tag="CAPTURAR DEPOIS" data-toggle="modal" data-target="#popupModal">
+
+            <area target="_self" alt="S3-CHIL-004" title="S3-CHIL-004" href="#" coords="429,412,717,562" shape="rect"
+            data-name="S3-CHIL-004" data-class="A" data-tag="Trane CGWA 100" data-toggle="modal" data-target="#popupModal"> 
+
+            <area target="_self" alt="S3-BAGC-009" title="S3-BAGC-009" href="#" coords="752,390,840,445" shape="rect"
+            data-name="S3-BAGC-009" data-class="B" data-tag="CAPTURAR DEPOIS" data-toggle="modal" data-target="#popupModal">
+
+            <area target="_self" alt="S3-BAGC-010" title="S3-BAGC-010" href="#" coords="748,454,841,508" shape="rect"
+            data-name="S3-BAGC-010" data-class="B" data-tag="CAPTURAR DEPOIS" data-toggle="modal" data-target="#popupModal">
+
+            <area target="_self" alt="S3-BAGC-012" title="S3-BAGC-012" href="#" coords="748,527,841,584" shape="rect"
+            data-name="S3-BAGC-012" data-class="B" data-tag="CAPTURAR DEPOIS" data-toggle="modal" data-target="#popupModal">
+
+            <area target="_self" alt="Tanque de água gelada" title="Tanque de água gelada" href="#"
+            coords="845,381,1028,579" shape="rect" data-name="TANQUE_AGUA_GELADA" data-class="" data-tag="CAPTURAR DEPOIS"
+            data-toggle="modal" data-target="#popupModal">
+
+            <area target="_self" alt="S3-BAGI-005" title="S3-BAGI-005" href="#" coords="1033,381,1124,445" shape="rect"
+            data-name="S3-BAGI-005" data-class="B" data-tag="CAPTURAR DEPOIS" data-toggle="modal" data-target="#popupModal">
+
+            <area target="_self" alt="S3-BAGI-004" title="S3-BAGI-004" href="#" coords="1034,453,1125,507" shape="rect"
+            data-name="S3-BAGI-004" data-class="B" data-tag="CAPTURAR DEPOIS" data-toggle="modal" data-target="#popupModal">
+
+            <area target="_self" alt="S3-BAGI-003" title="S3-BAGI-003" href="#" coords="1035,518,1127,578" shape="rect"
+            data-name="S3-BAGI-003" data-class="B" data-tag="CAPTURAR DEPOIS" data-toggle="modal" data-target="#popupModal">
+        </map>
+    </div>
+    <div id="popupModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <span>Name:</span>
+                                        <img src="images/download_icon.png" 
+                                            alt="Download Icon" class="input-icon download-icon" id="downloadIcon" width="30" height="40" style="margin-left: 225px;"
+                                            data-toggle="tooltip_download" title="Clique aqui para fazer o download">
+                                        <img src="https://cdn.icon-icons.com/icons2/2446/PNG/512/edit_text_icon_148716.png"
+                                            alt="Edit Icon" class="input-icon" id="editIcon" width="30" height="30"
+                                            data-toggle="tooltip_eqpto" title="Clique aqui para comentar o defeito do equipamento">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between mt-2">
+                                            <span><strong>Classe de reparo:</strong></span>
+                                            <span></span> <!-- Atualizado via JavaScript -->
+                                        </div>
+                                        <div class="d-flex justify-content-between mt-2">
+                                            <span><strong>Modelo:</strong></span>
+                                            <span style="color:#dc3545"></span> <!-- Atualizado via JavaScript -->
+                                        </div>
+                                        <div class="d-flex justify-content-between mt-2">
+                                            <span><strong>Última Vistoria:</strong></span>
+                                            <span>(Vai_pegar_do_banco)</span> <!-- Atualizado via Base_dados -->
+                                        </div>
+                                        <div id="text-box" style="display: none;">
+                                            <textarea id="defectInput" placeholder="Descreva o defeito aqui"></textarea>
+                                            <button id="saveDefect">Salvar</button>
+                                            <button id="statusButton">Status</button>
+                                        </div>
+                                        <!--<div class="text-right mt-3">
+                                            <img src="https://spartakpd.info/images/nav/breaking_25.gif"
+                                                alt="Blinking Red Light" class="status-gif">
+                                            <div class="hide">O equipamento necessita de agendamento de manutenção
+                                            </div>
+                                        </div>-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/General_Factory_control.js"></script>
+    <script>
+        function adjustMapAreas() {
+            var img = document.querySelector('img');
+            var areas = document.querySelectorAll('map area');
+            var imgWidth = img.offsetWidth;
+
+            areas.forEach(area => {
+                var coords = area.getAttribute('coords').split(',');
+                var adjustedCoords = coords.map(coord => Math.round(coord * (imgWidth / img.naturalWidth)));
+                area.setAttribute('coords', adjustedCoords.join(','));
+            });
+        }
+
+        window.addEventListener('resize', adjustMapAreas);
+        window.addEventListener('load', adjustMapAreas);
+    </script>
+</body>

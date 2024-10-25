@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <title>Sinotico Utilidades</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/General_stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <!--transform: translate(-50%, -50%);-->
+    <style>
+        area,
+        area:focus {
+            outline: none;
+        }
+
+        #chart-container {
+            position: absolute;
+        }
+
+        #chart-container-2 {
+            position: absolute;
+        }
+
+        #chart-container-3 {
+            position: absolute;
+        }
+        #chart-container-4 {
+            position: absolute;
+        }
+        #chart-container-5 {
+            position: absolute;
+        }
+        #chart-container-6 {
+            position: absolute;
+        }
+        #chart-container-7 {
+            position: absolute;
+        }
+        @media (max-height: 720px) {
+            #chart-container {
+                width: 35px;
+                height: 35px;
+            }
+            #chart-container-2 {
+                width: 35px;
+                height: 35px;
+            }
+            #chart-container-3 {
+                width: 35px;
+                height: 35px;
+            }
+            #chart-container-4 {
+                width: 35px;
+                height: 35px;
+            }
+            #chart-container-5 {
+                width: 35px;
+                height: 35px;
+            }
+            #chart-container-6 {
+                width: 35px;
+                height: 35px;
+            }
+            #chart-container-7 {
+                width: 35px;
+                height: 35px;
+            }
+        }
+    </style>
+</head>
+
+<body style="background-color:rgba(100, 154, 210, 1)">
+    <nav class="navbar navbar-expand-lg navbar-dark" id="sidebar">
+        <a class="navbar-brand" href="http://10.2.22.19:3000/Grendene.html">
+            <h2>GRENDENE<span class="trademark">&#174;</span></h2>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-brand">GRENDENE</span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav text-center">
+                <li class="nav-item">
+                    <a class="nav-link" class="active" href="http://10.2.22.19:3000/Factory_01.html">FÁBRICA 01</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://10.2.22.19:3000/Factory_02.html">FÁBRICA 02</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="factoryDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        FÁBRICA 03
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="factoryDropdown">
+                        <a class="dropdown-item" href="http://10.2.22.19:3000/Factory_03A.html">FÁBRICA 03A</a>
+                        <a class="dropdown-item" href="http://10.2.22.19:3000/Factory_03B.html">FÁBRICA 03B</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://10.2.22.19:3000/Factory_04.html">FÁBRICA 04</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://10.2.22.19:3000/Factory_05.html">FÁBRICA 05</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://10.2.22.19:3000/Factory_06.html">FÁBRICA 06</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://10.2.22.19:3000/Factory_07.html">FÁBRICA 07</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://10.2.22.19:3000/Factory_08.html">FÁBRICA 08</a>
+                </li>
+            </ul>
+        </div>
+
+        <button class="btn btn-primary login-btn" id="narrativa">
+            <i class="fas fa-sign-in-alt"></i> Descritiva
+        </button>
+    </nav>
+
+    <div class="image-container-Grendene">
+        <img src="images/Planta quadro sinóptico 3.png" alt="Planta_geral" usemap="#image-map" class="centered-image">
+        <map name="image-map">
+            <area target="_self" alt="Fábrica01_Utilidades" title="Fábrica01_Utilidades"
+                href="http://10.2.22.19:3000/Factory_01.html"
+                coords="343,526,335,541,354,553,330,589,331,590,330,590,307,580,290,606,144,518,144,512,111,491,157,417,217,454,225,442,323,504,316,509,332,519"
+                shape="poly" data-name="Fact_01">
+            <area target="_self" alt="Fábrica02_Utilidades" title="Fábrica02_Utilidades"
+                href="http://10.2.22.19:3000/Factory_02.html"
+                coords="168,191,167,203,149,200,145,207,120,205,120,293,151,293,151,299,171,297,172,305,315,304,315,294,330,296,329,205,314,204,312,191,285,190,230,190"
+                shape="poly" data-name="Fact_02">
+            <area target="_self" alt="Fábrica03_Utilidades" title="Fábrica03_Utilidades"
+                href="http://10.2.22.19:3000/Factory_03A.html"
+                coords="96,43,297,41,297,49,307,49,308,68,316,68,315,131,301,135,300,142,312,141,311,153,299,151,300,157,99,159"
+                shape="poly" data-name="Fact_03">
+            <area target="_self" alt="Fábrica04_Utilidades" title="Fábrica04_Utilidades"
+                href="http://10.2.22.19:3000/Factory_04.html"
+                coords="521,73,519,123,446,126,445,111,370,113,371,134,334,134,333,123,327,123,327,77,331,70,344,71,344,76,355,75,354,61,369,62,371,54,418,54,418,63,443,63,444,74"
+                shape="poly" data-name="Fact_04">
+            <area target="_self" alt="Fábrica05_Utilidades" title="Fábrica05_Utilidades"
+                href="http://10.2.22.19:3000/Factory_05.html"
+                coords="593,172,596,295,375,295,363,288,366,210,374,211,375,188,546,189,542,171" shape="poly" data-name="Fact_05">
+            <area target="_self" alt="Fábrica06_Utilidades" title="Fábrica06_Utilidades"
+                href="http://10.2.22.19:3000/Factory_06.html"
+                coords="480,652,584,648,582,621,595,621,585,341,443,348,447,452,433,453,436,530,453,531,450,574,431,574,433,617,452,617,455,632,480,631"
+                shape="poly" data-name="Fact_06">
+            <area target="_self" alt="Fábrica07_Utilidades" title="Fábrica07_Utilidades"
+                href="http://10.2.22.19:3000/Factory_07.html"
+                coords="676,560,678,673,689,672,689,691,956,684,954,707,1032,707,1030,683,1043,681,1040,534,1025,532,1024,517,992,519,991,534,932,536,932,527,896,524,893,520,840,521,843,536,815,537,814,525,722,524,720,541,686,542,685,562"
+                shape="poly" data-name="Fact_07">
+            <area target="_self" alt="Fábrica08_Utilidades" title="Fábrica08_Utilidades"
+                href="http://10.2.22.19:3000/Factory_08.html"
+                coords="656,257,892,257,896,392,829,393,830,418,736,420,736,398,656,397" shape="poly">
+            <!-- Outras áreas -->
+        </map>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!--#region Chart1-->
+    <script>
+        // Função para calcular o espaço horizontal ao redor da imagem
+        function calculateHorizontalSpacing() {
+            // Seleciona a imagem pelo seletor de classe
+            const image = document.querySelector('.centered-image');
+
+            // Obtém a largura da imagem e da janela (viewport)
+            const imageWidth = image.getBoundingClientRect().width;
+            const viewportWidth = window.innerWidth;
+
+            // Calcula o espaço restante horizontalmente (margem de cada lado)
+            const horizontalSpacing = (viewportWidth - imageWidth) / 2;
+
+            //console.log("Espaço horizontal em cada lado da imagem:", horizontalSpacing, "pixels");
+
+            return horizontalSpacing; // Opcional, caso queira usar o valor em outras funções
+        }
+
+        // Calcula o espaço ao carregar e redimensionar a janela
+        window.onload = calculateHorizontalSpacing;
+        window.onresize = calculateHorizontalSpacing; // Atualiza ao redimensionar
+    </script>
+
+
+
+    <!--#region Chart-->
+    <!-- Containers para os gráficos -->
+    <div id="chart-container">
+        <canvas id="lightsChart" width="50" height="50"></canvas>
+    </div>
+    <div id="chart-container-2">
+        <canvas id="lightsChart2" width="50" height="50"></canvas>
+    </div>
+    <div id="chart-container-3">
+        <canvas id="lightsChart3" width="50" height="50"></canvas>
+    </div>
+    <div id="chart-container-4">
+        <canvas id="lightsChart4" width="50" height="50"></canvas>
+    </div>
+    <div id="chart-container-5">
+        <canvas id="lightsChart5" width="50" height="50"></canvas>
+    </div>
+    <div id="chart-container-6">
+        <canvas id="lightsChart6" width="50" height="50"></canvas>
+    </div>
+    <div id="chart-container-7">
+        <canvas id="lightsChart7" width="50" height="50"></canvas>
+    </div>
+    <script>
+        // Função para calcular o espaço horizontal ao redor da imagem
+        function calculateHorizontalSpacing() {
+            const image = document.querySelector('.centered-image');
+            const imageWidth = image.getBoundingClientRect().width;
+            const viewportWidth = window.innerWidth;
+            const horizontalSpacing = (viewportWidth - imageWidth) / 2;
+            return horizontalSpacing;
+        }
+
+        // Ajuste das áreas do mapa para redimensionamento
+        function adjustMapAreas() {
+            const img = document.querySelector('img');
+            const areas = document.querySelectorAll('map area');
+            const imgWidth = img.offsetWidth;
+
+            areas.forEach(area => {
+                const coords = area.getAttribute('coords').split(',');
+                const adjustedCoords = coords.map(coord => Math.round(coord * (imgWidth / img.naturalWidth)));
+                area.setAttribute('coords', adjustedCoords.join(','));
+            });
+        }
+
+        window.addEventListener('resize', adjustMapAreas);
+        window.addEventListener('load', adjustMapAreas);
+
+        function getPolygonCenter(coords) {
+            let x = 0, y = 0, n = coords.length / 2;
+            for (let i = 0; i < coords.length; i += 2) {
+                x += parseInt(coords[i]);
+                y += parseInt(coords[i + 1]);
+            }
+            return { x: Math.round(x / n), y: Math.round(y / n) };
+        }
+
+        // Funções de posicionamento para os gráficos das Fábricas 01, 02 e 03
+        function positionChart() {
+            const a = calculateHorizontalSpacing();
+            const navbar = document.getElementById('sidebar');
+            const navbarHeight = navbar.getBoundingClientRect().height;
+            const area = document.querySelector('area[data-name="Fact_01"]');
+            const coords = area.getAttribute('coords').split(',').map(Number);
+            const center = getPolygonCenter(coords);
+
+            const chartContainer = document.getElementById('chart-container');
+            chartContainer.style.left = `${center.x + a}px`;
+            chartContainer.style.top = `${center.y + navbarHeight}px`;
+        }
+
+        function positionChart2() {
+            const a = calculateHorizontalSpacing();
+            const navbar = document.getElementById('sidebar');
+            const navbarHeight = navbar.getBoundingClientRect().height;
+            const area = document.querySelector('area[data-name="Fact_02"]');
+            const coords = area.getAttribute('coords').split(',').map(Number);
+            const center = getPolygonCenter(coords);
+
+            const chartContainer2 = document.getElementById('chart-container-2');
+            chartContainer2.style.left = `${center.x + (a*1.10)}px`;
+            chartContainer2.style.top = `${center.y + navbarHeight}px`;
+        }
+
+        function positionChart3() {
+            const a = calculateHorizontalSpacing();
+            const navbar = document.getElementById('sidebar');
+            const navbarHeight = navbar.getBoundingClientRect().height;
+            const area = document.querySelector('area[data-name="Fact_03"]');
+            const coords = area.getAttribute('coords').split(',').map(Number);
+            const center = getPolygonCenter(coords);
+
+            const chartContainer3 = document.getElementById('chart-container-3');
+            chartContainer3.style.left = `${center.x + (a*0.9)}px`;
+            chartContainer3.style.top = `${center.y + navbarHeight}px`;
+        }
+
+        function positionChart4() {
+            const a = calculateHorizontalSpacing();
+            const navbar = document.getElementById('sidebar');
+            const navbarHeight = navbar.getBoundingClientRect().height;
+            const area = document.querySelector('area[data-name="Fact_04"]');
+            const coords = area.getAttribute('coords').split(',').map(Number);
+            const center = getPolygonCenter(coords);
+
+            const chartContainer4 = document.getElementById('chart-container-4');
+            chartContainer4.style.left = `${center.x + (a*1.1)}px`;
+            chartContainer4.style.top = `${center.y + navbarHeight}px`;
+        }
+
+        function positionChart5() {
+            const a = calculateHorizontalSpacing();
+            const navbar = document.getElementById('sidebar');
+            const navbarHeight = navbar.getBoundingClientRect().height;
+            const area = document.querySelector('area[data-name="Fact_05"]');
+            const coords = area.getAttribute('coords').split(',').map(Number);
+            const center = getPolygonCenter(coords);
+
+            const chartContainer5 = document.getElementById('chart-container-5');
+            chartContainer5.style.left = `${center.x + (a*1.1)}px`;
+            chartContainer5.style.top = `${center.y + navbarHeight}px`;
+        }
+        function positionChart6() {
+            const a = calculateHorizontalSpacing();
+            const navbar = document.getElementById('sidebar');
+            const navbarHeight = navbar.getBoundingClientRect().height;
+            const area = document.querySelector('area[data-name="Fact_06"]');
+            const coords = area.getAttribute('coords').split(',').map(Number);
+            const center = getPolygonCenter(coords);
+
+            const chartContainer6 = document.getElementById('chart-container-6');
+            chartContainer6.style.left = `${center.x + (a*1.1)}px`;
+            chartContainer6.style.top = `${center.y + navbarHeight}px`;
+        }
+        function positionChart7() {
+            const a = calculateHorizontalSpacing();
+            const navbar = document.getElementById('sidebar');
+            const navbarHeight = navbar.getBoundingClientRect().height;
+            const area = document.querySelector('area[data-name="Fact_07"]');
+            const coords = area.getAttribute('coords').split(',').map(Number);
+            const center = getPolygonCenter(coords);
+
+            const chartContainer7 = document.getElementById('chart-container-7');
+            chartContainer7.style.left = `${center.x + (a*1.1)}px`;
+            chartContainer7.style.top = `${center.y + navbarHeight}px`;
+        }
+
+        window.addEventListener('resize', positionChart);
+        window.addEventListener('resize', positionChart2);
+        window.addEventListener('resize', positionChart3);
+        window.addEventListener('resize', positionChart4);
+        window.addEventListener('resize', positionChart5);
+        window.addEventListener('resize', positionChart6);
+        window.addEventListener('resize', positionChart7);
+        window.addEventListener('load', positionChart);
+        window.addEventListener('load', positionChart2);
+        window.addEventListener('load', positionChart3);
+        window.addEventListener('load', positionChart4);
+        window.addEventListener('load', positionChart5);
+        window.addEventListener('load', positionChart6);
+        window.addEventListener('load', positionChart7);
+
+
+        // Funções para buscar dados e gerar gráficos para as Fábricas 01, 02 e 03
+        async function fetchChartData() {
+            const response = await fetch('/chart-data');
+            const data = await response.json();
+            return data;
+        }
+
+        async function fetchChartData2() {
+            const response = await fetch('/chart-data_2');
+            const data = await response.json();
+            return data;
+        }
+
+        async function fetchChartData3() {
+            const response = await fetch('/chart-data_3');
+            const data = await response.json();
+            return data;
+        }
+        async function fetchChartData4() {
+            const response = await fetch('/chart-data_4');
+            const data = await response.json();
+            return data;
+        }
+        async function fetchChartData5() {
+            const response = await fetch('/chart-data_5');
+            const data = await response.json();
+            return data;
+        }
+        async function fetchChartData6() {
+            const response = await fetch('/chart-data_6');
+            const data = await response.json();
+            return data;
+        }
+        async function fetchChartData7() {
+            const response = await fetch('/chart-data_7');
+            const data = await response.json();
+            return data;
+        }
+        async function gerarGrafico() {
+            const chartData = await fetchChartData();
+            const ctx = document.getElementById('lightsChart').getContext('2d');
+            const chart = new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    datasets: [{
+                        data: [chartData.green, chartData.yellow, chartData.red],
+                        backgroundColor: ['green', 'yellow', 'red'],
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        datalabels: {
+                            color: '#000',
+                            font: {
+                                size: '14px',
+                                weight: 'bold'
+                            },
+                            formatter: (value) => value > 0 ? value : '' // Exibe apenas se o valor for maior que zero
+                        }
+                    }
+                },
+                plugins: [ChartDataLabels]
+            });
+        }
+
+        async function gerarGrafico2() {
+            const chartData = await fetchChartData2();
+            const ctx2 = document.getElementById('lightsChart2').getContext('2d');
+            const chart2 = new Chart(ctx2, {
+                type: 'pie',
+                data: {
+                    datasets: [{
+                        data: [chartData.green, chartData.yellow, chartData.red],
+                        backgroundColor: ['green', 'yellow', 'red'],
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        datalabels: {
+                            color: '#000',
+                            font: {
+                                size: '14px',
+                                weight: 'bold'
+                            },
+                            formatter: (value) => value > 0 ? value : '' // Exibe apenas se o valor for maior que zero
+                        }
+                    }
+                },
+                plugins: [ChartDataLabels]
+            });
+        }
+
+        async function gerarGrafico3() {
+            const chartData = await fetchChartData3();
+            const ctx3 = document.getElementById('lightsChart3').getContext('2d');
+            const chart3 = new Chart(ctx3, {
+                type: 'pie',
+                data: {
+                    datasets: [{
+                        data: [chartData.green, chartData.yellow, chartData.red],
+                        backgroundColor: ['green', 'yellow', 'red'],
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        datalabels: {
+                            color: '#000',
+                            font: {
+                                size: '14px',
+                                weight: 'bold'
+                            },
+                            formatter: (value) => value > 0 ? value : '' // Exibe apenas se o valor for maior que zero
+                        }
+                    }
+                },
+                plugins: [ChartDataLabels]
+            });
+        }
+        async function gerarGrafico4() {
+            const chartData = await fetchChartData4();
+            const ctx3 = document.getElementById('lightsChart4').getContext('2d');
+            const chart3 = new Chart(ctx3, {
+                type: 'pie',
+                data: {
+                    datasets: [{
+                        data: [chartData.green, chartData.yellow, chartData.red],
+                        backgroundColor: ['green', 'yellow', 'red'],
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        datalabels: {
+                            color: '#000',
+                            font: {
+                                size: '14px',
+                                weight: 'bold'
+                            },
+                            formatter: (value) => value > 0 ? value : '' // Exibe apenas se o valor for maior que zero
+                        }
+                    }
+                },
+                plugins: [ChartDataLabels]
+            });
+        }
+       async function gerarGrafico5() {
+            const chartData = await fetchChartData5();
+            const ctx3 = document.getElementById('lightsChart5').getContext('2d');
+            const chart3 = new Chart(ctx3, {
+                type: 'pie',
+                data: {
+                    datasets: [{
+                        data: [chartData.green, chartData.yellow, chartData.red],
+                        backgroundColor: ['green', 'yellow', 'red'],
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        datalabels: {
+                            color: '#000',
+                            font: {
+                                size: '14px',
+                                weight: 'bold'
+                            },
+                            formatter: (value) => value > 0 ? value : '' // Exibe apenas se o valor for maior que zero
+                        }
+                    }
+                },
+                plugins: [ChartDataLabels]
+            });
+        }
+        async function gerarGrafico6() {
+            const chartData = await fetchChartData6();
+            const ctx3 = document.getElementById('lightsChart6').getContext('2d');
+            const chart3 = new Chart(ctx3, {
+                type: 'pie',
+                data: {
+                    datasets: [{
+                        data: [chartData.green, chartData.yellow, chartData.red],
+                        backgroundColor: ['green', 'yellow', 'red'],
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        datalabels: {
+                            color: '#000',
+                            font: {
+                                size: '14px',
+                                weight: 'bold'
+                            },
+                            formatter: (value) => value > 0 ? value : '' // Exibe apenas se o valor for maior que zero
+                        }
+                    }
+                },
+                plugins: [ChartDataLabels]
+            });
+        }
+        async function gerarGrafico7() {
+            const chartData = await fetchChartData7();
+            const ctx3 = document.getElementById('lightsChart7').getContext('2d');
+            const chart3 = new Chart(ctx3, {
+                type: 'pie',
+                data: {
+                    datasets: [{
+                        data: [chartData.green, chartData.yellow, chartData.red],
+                        backgroundColor: ['green', 'yellow', 'red'],
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        datalabels: {
+                            color: '#000',
+                            font: {
+                                size: '14px',
+                                weight: 'bold'
+                            },
+                            formatter: (value) => value > 0 ? value : '' // Exibe apenas se o valor for maior que zero
+                        }
+                    }
+                },
+                plugins: [ChartDataLabels]
+            });
+        }
+        gerarGrafico();
+        gerarGrafico2();
+        gerarGrafico3();
+        gerarGrafico4();
+        gerarGrafico5();
+        gerarGrafico6();
+        gerarGrafico7();
+
+    </script>
+
+    <!--#endregion-->
+
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+const express = require('express');
+const xlsx = require('xlsx');
+const path = require('path');
+const fs = require('fs');
+const app = express();
+var request = require("request");
+const port = 3000;
+/*
+var link = "https://docs.google.com/spreadsheets/d/1hcfneW8iGtDKHrCdO_L2HUAGISBd8NxyCxx8naiQhHI/edit?gid=0#gid=0";
+request({link: link, encoding: null}, function(err, resp, body) {
+  var planilhalhalhalhalha = xlsx.read(body);
+  console.log(planilhalhalhalhalha);
+});
+*/
+
+// Carregar a planilha (agora chamada "Pasta 3.xlsx")
+const workbook = xlsx.readFile(path.join(__dirname, 'Planilha_teste_fab_01.xlsx'));
+const sheetName = workbook.SheetNames[0];
+const worksheet = workbook.Sheets[sheetName];
+
+// Converter os dados da planilha para JSON
+const data = xlsx.utils.sheet_to_json(worksheet, { header: 1 });
+console.log(data);
+
+// Servir arquivos estáticos da pasta 'public'
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.json());
+
+function determinarCor(valor) {
+    if (valor === "Disponível" || valor == "Funcionan.") {
+        return 'green';
+    } else if (valor === "Falha") {
+        return 'yellow';
+    } else if (valor === "Indisponiv.") {
+        return 'red';
+    } else {
+        return null;  // Para valores não reconhecidos
+    }
+}
+
+// Função para processar a linha com o maior ID
+function processarLinhaMaxId(data) {
+    const ids = data.map(row => row[0]);  // Coluna de identificação (id)
+    const maxId = Math.max(...ids.filter(ids => typeof ids === 'number'));  // Encontrar o maior valor de ID
+    const linha = data.find(row => row[0] === maxId);  // Encontrar a linha correspondente
+    //console.log(linha);
+
+    // Mapeie as cores e suas posições
+    const lightsData = linha.slice(11, 25).map((valor, index) => {
+        return {
+            cor: determinarCor(valor),
+            posicao: index // Posição baseada na ordem dos equipamentos
+        };
+    }).filter(luz => luz.cor !== null);
+
+    //console.log(lightsData);
+    return lightsData;
+}
+
+
+app.get('/lights', (req, res) => {
+    const lightsData = processarLinhaMaxId(data);
+    res.json(lightsData);
+});
+// Servir a página principal na rota '/'
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'Factory_01.html'));
+});
+
+// Iniciar o servidor
+app.listen(port, '0.0.0.0', () => {
+    console.log(`Servidor rodando em http://localhost:${port}`);
+});
+
+app.post('/saveDefect', (req, res) => {
+    const { name, defect } = req.body;
+
+    if (!name || !defect) {
+        return res.status(400).send('Nome do equipamento ou defeito não fornecido.');
+    }
+
+    // Pegar a data e hora atual
+    const now = new Date();
+    const day = String(now.getDate()).padStart(2, '0');
+    const month = String(now.getMonth() + 1).padStart(2, '0');  // Janeiro é 0
+    const year = now.getFullYear();
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+
+    // Formatar data e hora
+    const dateTime = `${day}/${month}/${year} às ${hours}:${minutes}`;
+    console.log(dateTime);
+    // Formatar a linha a ser adicionada
+    const line = `Equipamento: ${name}, Comentário: ${defect} (Data: ${dateTime})\n`;
+
+    // Definir o caminho do arquivo .txt
+    const filePath = path.join(__dirname, 'defeitos.txt');
+
+    // Adicionar a linha ao arquivo .txt
+    fs.appendFile(filePath, line, (err) => {
+        if (err) {
+            console.error('Erro ao salvar o defeito:', err);
+            return res.status(500).send('Erro ao salvar o defeito.');
+        }
+
+        res.send('Defeito salvo com sucesso!');
+    });
+});
+/*
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
+var link = "https://grendenecombr-my.sharepoint.com/personal/fernandes_gomes_grendene_com_br/_layouts/15/download.aspx?share=ERCGDW604NlGj6nFyQgAkjcBkAkGGTw8Jx8I-_WnGTwCrQ";
+
+request({ url: link, encoding: null }, function (err, resp, body) {
+    if (err) {
+      console.error("Error downloading file:", err);
+      return;
+    }
+  
+    // Read the downloaded XLSX file
+    try {
+      var workbook = xlsx.read(body, { type: "buffer" });
+  
+      // Get the first sheet name
+      var sheetName = workbook.SheetNames[0];
+  
+      // Get the first sheet
+      var worksheet = workbook.Sheets[sheetName];
+      const data = xlsx.utils.sheet_to_json(worksheet, { header: 1 });
+      // Print the contents of the sheet
+      console.log("Sheet Data:", data);
+    } catch (error) {
+      console.error("Error processing the Excel file:", error);
+    }
+});
+*/

@@ -1,0 +1,159 @@
+<!--Definição de HTML, obrigatório inclusão-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<!--Definição de HTML, obrigatório inclusão-->
+<!----->
+<!--<head> Refere-se a metadados, ou seja, dados sobre dados. São esses dados que são retornados ao se buscar em motores/intranets-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipamentos Fábrica 05</title>
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <!--Carrega Dados de estilização (CSS e UX para o documento. Bootstrap é uma biblioteca famosa com funções úteis, já stylesheet é a padronização do equipamento)-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/General_stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!--Carrega Dados de estilização (CSS e UX para o documento. Bootstrap é uma biblioteca famosa com funções úteis, já stylesheet é a padronização do equipamento)-->
+</head>
+<!--Corpo do documento, onde vai entrar todos os dados e comportamentos-->
+
+<body>
+    <div id="navbar-container"></div>
+
+    <!--Container é uma classe div propiciada pelo Bootstrap de maneira mais elegante|HTML também a possui, porém mais rústica-->
+    <div class="image-container-fab05">
+        <img src="images/imagem_final_05.gif" alt="Fact_05"
+            class="centered-image" usemap="#image-map">
+        <map name="image-map">
+            <area target="_self" alt="s5-GERN-001" title="s5-GERN-001" href="#" coords="938,88,1033,241" shape="rect" data-toggle="modal" data-target="#popupModal"
+            data-name ="S5-GERN-001" data-tag="CAPTURAR" data-class="B">
+
+            <area target="_self" alt="S5-GERN-002" title="S5-GERN-002" href="#" coords="1060,91,1154,243" shape="rect" data-toggle="modal" data-target="#popupModal"
+            data-name ="S5-GERN-002" data-tag="CAPTURAR" data-class="B">
+
+            <area target="_self" alt="S5-COMP-001" title="S5-COMP-001" href="#" coords="37,193,244,341" shape="rect" data-toggle="modal" data-target="#popupModal"
+            data-name ="S5-COMP-001" data-tag="Ingersoll R75 N-A" data-class="B">
+            
+            <area target="_self" alt="S5-COMP-002" title="S5-COMP-002" href="#" coords="261,196,361,340" shape="rect" data-toggle="modal" data-target="#popupModal"
+            data-name ="S5-COMP-002" data-tag="CAPTURAR" data-class="B">
+
+            <area target="_self" alt="S5-COMP-008" title="S5-COMP-008" href="#" coords="372,195,536,341" shape="rect" data-toggle="modal" data-target="#popupModal"
+            data-name ="S5-COMP-008" data-tag="CAPTURAR" data-class="B">
+
+            <area target="_self" alt="S5-COMP-007" title="S5-COMP-007" href="#" coords="558,196,655,344" shape="rect" data-toggle="modal" data-target="#popupModal"
+            data-name ="S5-COMP-007" data-tag="CAPTURAR" data-class="B">
+
+            <area target="_self" alt="S5-SECA-002" title="S5-SECA-002" href="#" coords="111,417,191,550" shape="rect" data-toggle="modal" data-target="#popupModal"
+            data-name ="S5-SECA-002" data-tag="CAPTURAR" data-class="B">
+
+            <area target="_self" alt="S5-SECA-001" title="S5-SECA-001" href="#" coords="657,365,752,501" shape="rect" data-toggle="modal" data-target="#popupModal"
+            data-name ="S5-SECA-001" data-tag="CAPTURAR" data-class="B">
+
+            <area target="_self" alt="S5-COMP-006" title="S5-COMP-006" href="#" coords="690,198,850,339" shape="rect" data-toggle="modal" data-target="#popupModal"
+            data-name ="S5-COMP-006" data-tag="CAPTURAR" data-class="B">
+
+            <area target="_self" alt="S5-RA-01" title="S5-RA-01" href="#" coords="238,449,319,532" shape="rect" data-toggle="modal" data-target="#popupModal"
+            data-name ="S5-RA-01" data-tag="CAPTURAR" data-class="C">
+
+            <area target="_self" alt="S5-RA" title="S5-RA" href="#" coords="417,402,487,473" shape="rect" data-name ="S5-RA" data-tag="CAPTURAR" data-class="B"
+            data-name ="S5-RA" data-tag="CAPTURAR" data-class="C">
+
+            <area target="_self" alt="S5-VASP-006" title="S5-VASP-006" href="#" coords="57,686,137,766" shape="rect" data-toggle="modal" data-target="#popupModal"
+            data-name ="S5-VASP-006" data-tag="CAPTURAR" data-class="C">
+
+            <area target="_self" alt="S5-VASP-007" title="S5-VASP-007" href="#" coords="153,687,230,769" shape="rect" data-toggle="modal" data-target="#popupModal"
+            data-name ="S5-VASP-007" data-tag="CAPTURAR" data-class="C">
+
+            <area target="_self" alt="S5-SECA-003" title="S5-SECA-003" href="#" coords="254,672,340,753" shape="rect" data-toggle="modal" data-target="#popupModal"
+            data-name ="S5-SECA-003" data-tag="CAPTURAR" data-class="C">
+        </map>
+    </div>
+    <div id="popupModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <span>Name:</span>
+                                        <img src="images/download_icon.png" 
+                                            alt="Download Icon" class="input-icon download-icon" id="downloadIcon" width="30" height="40" style="margin-left: 225px;"
+                                            data-toggle="tooltip_download" title="Clique aqui para fazer o download">
+                                        <img src="https://cdn.icon-icons.com/icons2/2446/PNG/512/edit_text_icon_148716.png"
+                                            alt="Edit Icon" class="input-icon" id="editIcon" width="30" height="30"
+                                            data-toggle="tooltip_eqpto" title="Clique aqui para comentar o defeito do equipamento">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between mt-2">
+                                            <span><strong>Classe de reparo:</strong></span>
+                                            <span></span> <!-- Atualizado via JavaScript -->
+                                        </div>
+                                        <div class="d-flex justify-content-between mt-2">
+                                            <span><strong>Modelo:</strong></span>
+                                            <span style="color:#dc3545"></span> <!-- Atualizado via JavaScript -->
+                                        </div>
+                                        <div class="d-flex justify-content-between mt-2">
+                                            <span><strong>Última Vistoria:</strong></span>
+                                            <span>(Vai_pegar_do_banco)</span> <!-- Atualizado via Base_dados -->
+                                        </div>
+                                        <div id="text-box" style="display: none;">
+                                            <textarea id="defectInput" placeholder="Descreva o defeito aqui"></textarea>
+                                            <button id="saveDefect">Salvar</button>
+                                            <button id="statusButton">Status</button>
+                                        </div>
+                                        <!--<div class="text-right mt-3">
+                                            <img src="https://spartakpd.info/images/nav/breaking_25.gif"
+                                                alt="Blinking Red Light" class="status-gif">
+                                            <div class="hide">O equipamento necessita de agendamento de manutenção
+                                            </div>
+                                        </div>-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/General_Factory_control.js"></script>
+    <script>
+        function adjustMapAreas() {
+            var img = document.querySelector('img');
+            var areas = document.querySelectorAll('map area');
+            var imgWidth = img.offsetWidth;
+
+            areas.forEach(area => {
+                var coords = area.getAttribute('coords').split(',');
+                var adjustedCoords = coords.map(coord => Math.round(coord * (imgWidth / img.naturalWidth)));
+                area.setAttribute('coords', adjustedCoords.join(','));
+            });
+        }
+
+        window.addEventListener('resize', adjustMapAreas);
+        window.addEventListener('load', adjustMapAreas);
+    </script>
+
+</body>
+<!-- <area target="_self" alt="S5-COMP-001" title="S5-COMP-001" href="#" coords="37,193,244,341" shape="rect">
+    <area target="_self" alt="S5-COMP-002" title="S5-COMP-002" href="#" coords="261,196,361,340" shape="rect">
+    <area target="_self" alt="S5-COMP-008" title="S5-COMP-008" href="#" coords="372,195,536,341" shape="rect">
+    <area target="_self" alt="S5-COMP-006" title="S5-COMP-006" href="#" coords="690,198,850,339" shape="rect">
+    <area target="_self" alt="S5-COMP-007" title="S5-COMP-007" href="#" coords="558,196,655,344" shape="rect">
+    <area target="_self" alt="S5-SECA-002" title="S5-SECA-002" href="#" coords="112,415,210,551" shape="rect">
+    <area target="_self" alt="S5-RA-01" title="S5-RA-01" href="#" coords="238,449,319,532" shape="rect">
+    <area target="_self" alt="S5-RA" title="S5-RA" href="#" coords="417,402,487,473" shape="rect">
+    <area target="_self" alt="S5-SECA-001" title="S5-SECA-001" href="#" coords="657,365,752,501" shape="rect">
+    <area target="_self" alt="S5-VASP-006" title="S5-VASP-006" href="#" coords="57,686,137,766" shape="rect">
+    <area target="_self" alt="S5-VASP-007" title="S5-VASP-007" href="#" coords="153,687,230,769" shape="rect">
+    <area target="_self" alt="S5-SECA-003" title="S5-SECA-003" href="#" coords="254,672,340,753" shape="rect">
+    <area target="_self" alt="S5-GERN-001" title="S5-GERN-001" href="#" coords="938,88,1033,241" shape="rect">
+    <area target="_self" alt="S5-GERN-002" title="S5-GERN-002" href="#" coords="1060,91,1154,243" shape="rect">-->

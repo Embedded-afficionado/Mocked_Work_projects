@@ -1,0 +1,578 @@
+sass source/stylesheets/index.scss build/stylesheets/index.css:root {
+    --bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+}
+
+/* Utilizado para o esconder display imediato de informações*/
+.hide {
+    display: none;
+}
+
+/*Background color */
+body {
+    background: linear-gradient(120deg, #6f89a5, #d6dbe0);
+    /* Define o gradiente aqui */
+    background-attachment: fixed;
+    /* Faz o fundo ficar fixo ao rolar a página */
+}
+
+/* Estilização do card central -> POP-UP*/
+.card {
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #cad0d6;
+    border-bottom: 1.2px groove #131212;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-body {
+    font-size: 14px;
+}
+
+.status-gif {
+    width: 50px;
+    height: auto;
+    cursor: pointer
+}
+
+.caixa_texto {
+    background-color: rgb(148, 148, 136);
+    border: 1px solid #ccc;
+    padding: 2px;
+    margin-top: 10px;
+    display: none;
+}
+
+.input-icon {
+    cursor: pointer;
+}
+
+.status-gif:hover+.hide {
+    display: block;
+    color: red;
+}
+
+/* Utilizado para o esconder display imediato de informações*/
+.hide {
+    display: none;
+}
+
+/* Estilização do card central ->*/
+.card {
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #cad0d6;
+    border-bottom: 1.2px groove #131212;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-body {
+    font-size: 14px;
+}
+
+.status-gif {
+    width: 50px;
+    height: auto;
+    cursor: pointer
+}
+
+.text-box {
+    background-color: rgb(148, 148, 136);
+    border: 1px solid #ccc;
+    padding: 2px;
+    margin-top: 10px;
+    display: none;
+}
+
+.input-icon {
+    cursor: pointer;
+}
+
+.status-gif:hover+.hide {
+    display: block;
+    color: red;
+}
+
+/* Barra de navegação, ícones internos dela e customização de textos*/
+.navbar {
+    background-color: #000000;
+    border-style: ridge;
+    border-bottom-color: #cad0d6;
+    padding: 0.5rem 1rem;
+    /* Ajusta o espaçamento interno para melhor adaptação */
+}
+
+.navbar-brand {
+    color: rgba(100, 154, 210, 1) !important;
+    font-weight: bold;
+    font-family: 'fangsong', Meiryo, sans-serif;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-nav {
+    flex-direction: row;
+    /* Garantir alinhamento em linha */
+    justify-content: center;
+    /* Centralizar itens */
+}
+
+.nav-item a {
+    font-size: 1.2rem;
+    /* Tamanho da fonte ajustado para maior adaptabilidade */
+    font-family: "Brush Script", MT !important;
+    font-weight: 500;
+    color: #d8d8d8 !important;
+    padding: 0.5rem 1rem;
+    /* Melhor espaçamento entre links */
+}
+
+.navbar-nav .nav-item.active {
+    background-color: rgb(44, 43, 6);
+    border-radius: 5px;
+}
+
+.navbar-nav .nav-item.active .nav-link {
+    color: #000;
+    font-weight: 700;
+}
+
+.navbar-nav .dropdown-menu {
+    background-color: #000000;
+    border: none;
+    text-align: center;
+}
+
+.navbar-nav .dropdown-item {
+    color: #ffffff;
+}
+.navbar-nav .dropdown-item.active {
+    background-color: rgb(44, 43, 6);
+    border-radius: 5px;
+}
+
+.navbar-nav .dropdown-item:hover {
+    background-color: rgba(100, 154, 210, 1);
+}
+
+.nav-item .nav-link:hover {
+    color: rgba(100, 154, 210, 1) !important;
+    /* Cor amarela ao passar o mouse */
+    text-decoration: none;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column;
+        /* Empilha os itens em telas menores */
+        margin-left: 0;
+        /* Remove margem em telas pequenas */
+    }
+
+    .navbar-nav .nav-item {
+        margin-bottom: 0.5rem;
+        /* Espaçamento entre os itens */
+    }
+
+    .navbar-brand h2 {
+        font-size: 1.5rem;
+        /* Ajuste de tamanho da marca para telas menores */
+    }
+
+    .nav-item a {
+        font-size: 1rem;
+        /* Fonte menor para telas menores */
+    }
+}
+
+/* Tentativa */
+
+/* All rights reserved icon edit */
+.trademark {
+    font-size: 20px;
+    vertical-align: super;
+}
+
+/* Centralização da fábrica em um container bootstrap */
+
+.image-container-Fab02 {
+    display: flex;
+    justify-content: center;  /* Centraliza horizontalmente */
+    align-items: center;      /* Centraliza verticalmente */
+    height: calc(100vh - 79px); /* Altura da tela menos a altura da navbar */
+    box-sizing: border-box;    /* Inclui padding no cálculo de tamanho */
+    z-index: 1;
+}
+
+
+.image-container-fab03a {
+    height: calc(100vh - 79px);
+    display: flex;
+    justify-content: center;
+    /* Centraliza a imagem horizontalmente */
+    align-items: center;
+    /* Centraliza a imagem verticalmente, caso necessário */
+
+}
+
+.image-container-fab03B {
+    height: calc(100vh - 79px);
+    margin-left: 70px;
+    display: flex;
+    justify-content: center;
+    /* Centraliza a imagem horizontalmente */
+    align-items: center;
+    /* Centraliza a imagem verticalmente, caso necessário */
+}
+
+.image-container-fab04 {
+    height: calc(100vh - 79px);
+    margin-left: 70px;
+    display: flex;
+    justify-content: center;
+    /* Centraliza a imagem horizontalmente */
+    align-items: center;
+    /* Centraliza a imagem verticalmente, caso necessário */
+}
+
+.image-container-fab05 {
+    height: calc(100vh - 79px);
+    margin-left: 70px;
+    display: flex;
+    justify-content: center;
+    /* Centraliza a imagem horizontalmente */
+    align-items: center;
+    /* Centraliza a imagem verticalmente, caso necessário */
+}
+.image-container-fab06 {
+    height: calc(100vh - 79px);
+    display: flex;
+    justify-content: center;  /* Centraliza horizontalmente */
+    align-items: center;      /* Centraliza verticalmente */
+     /* Altura da tela menos a altura da navbar */
+    box-sizing: border-box;    /* Inclui padding no cálculo de tamanho */
+}
+.image-container-Fab07 {
+    height: calc(100vh - 79px); /* Altura da tela menos a altura da navbar */
+    display: flex;
+    justify-content: center;  /* Centraliza horizontalmente */
+    align-items: center;      /* Centraliza verticalmente */
+    box-sizing: border-box;    /* Inclui padding no cálculo de tamanho */
+}
+.image-container-fab08 {
+    height: calc(100vh - 79px);
+    margin-bottom: 10px;
+    margin-left: 70px;
+    display: flex;
+    justify-content: center;
+    /* Centraliza a imagem horizontalmente */
+    align-items: center;
+    /* Centraliza a imagem verticalmente, caso necessário */
+}
+.image-container-Grendene {
+    height: calc(100vh - 79px); /* Altura da tela menos a altura da navbar */
+    display: flex;
+    justify-content: center;  /* Centraliza horizontalmente */
+    align-items: center;      /* Centraliza verticalmente */
+    box-sizing: border-box;    /* Inclui padding no cálculo de tamanho */
+}
+/* Estilo da imagem sinóptica */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.centered-image {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100vh; /* Ajuste a altura máxima para que a imagem se ajuste à tela */
+    object-fit: contain; /* Garante que a imagem se ajuste corretamente sem distorção */
+}
+
+@media (max-height: 900px) {
+    /*perfeito para 1600x900 firefox*/
+    .centered-image {
+        max-height: 80vh; /* Reduz a altura máxima em telas menores */
+    }
+    .nav-item a {
+        font-size: 1rem;
+        /* Tamanho da fonte ajustado para maior adaptabilidade */
+        font-family: "Brush Script", MT !important;
+        font-weight: 500;
+        color: #d8d8d8 !important;
+        padding: 0.5rem 1rem;
+        /* Melhor espaçamento entre links */
+    }
+    .login-btn {
+        background-color: #000000 !important;
+        border: none;
+        color: rgb(245, 243, 243) !important;
+        font-size: 1rem;
+        padding: 10px 20px;
+        border-radius: 30px;
+        transition: background-color 1s ease;
+    }
+}
+
+@media (max-width: 1480px) {
+    .centered-image-image {
+        width: 80%;
+        height: auto;
+    }
+}
+
+
+/* Estilização Login */
+.login-btn {
+    background-color: #000000 !important;
+    border: none;
+    color: rgb(245, 243, 243) !important;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: background-color 1s ease;
+}
+
+.login-btn i {
+    margin-right: 8px;/
+}
+
+.login-btn:hover {
+    color: rgba(100, 154, 210, 1) !important;
+}
+
+/* Remove o contorno pontilhado específico do Firefox (deu certo n)*/
+area::-moz-focus-inner {
+    border: 0;
+}
+
+/* Necessário para as luzes*/
+.light {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    opacity: 1.0;
+    box-shadow: 0 0 2px #050505;
+    transition: transform 0.2s, box-shadow 0.2s;
+    object-fit: contain;
+    z-index: 0;
+    pointer-events: none;
+    /* Transição suave para efeitos */
+}
+
+.green {
+    background-image: url('https://assets-v2.lottiefiles.com/a/a52ff63e-1163-11ee-8709-e7f491c567ab/yzpGZve0Vu.gif');
+    background-size: cover;
+    box-shadow: 0 0 5px #050505;
+}
+
+.yellow {
+    background-image: url('https://media.tenor.com/EefBL5-3qKcAAAAM/yellow-led.gif');
+    background-size: cover;
+    box-shadow: 0 0 5px #050505;
+}
+
+.red {
+    background-image: url('https://spartakpd.info/images/nav/breaking_25.gif');
+    background-size: cover;
+    box-shadow: 0 0 5px #050505;
+}
+
+@media(max-height:840px){
+    .light{
+        width: 25px;
+        height: 25px;
+    }
+}
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.area-highlight {
+    position: absolute;
+    border-radius: 10px;
+    animation: blink 1.5s infinite;
+}
+
+/* Cores para cada status */
+.area-available {
+    border: 3px solid green;
+}
+
+.area-failure {
+    border: 3px solid yellow;
+}
+
+.area-unavailable {
+    border: 3px solid red;
+}
+
+@media (max-width: 1450px) {
+    .centered-image-image2{
+        max-height: 83vh;
+    }
+    
+}
+
+#defectInput {
+    width: 100%; /* Aproveita o espaço horizontal completo */
+    height: 80px; /* Ajusta a altura conforme necessário */
+    padding: 10px;
+    font-size: 13px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+#saveDefect {
+    background-color: #5f6e63;
+    color: white;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    position: absolute; /* Fixar à direita */
+    right: 20px;
+    bottom: -1px;
+}
+#saveDefect:hover {
+    background-color: rgba(100, 154, 210, 1);
+    transform: scale(1.05);
+}
+
+#saveDefect:active {
+    transform: scale(0.95);
+}
+#statusButton{
+    background-color: #5f6e63;
+    color: white;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    position: absolute; /* Fixar à direita */
+    left: 22px;
+    bottom: -1px;
+}
+#statusButton:hover {
+    background-color: rgba(100, 154, 210, 1);
+    transform: scale(1.05);
+}
+
+#statusButton:active {
+    transform: scale(0.95);
+}
+#thoughtBubble {
+    display: none;
+    position: absolute;
+    top: 20px; /* Ajuste conforme a necessidade */
+    left: -200px; /* Posição à esquerda do pop-up */
+    background-color:  rgba(100, 154, 210, 1);;
+    color: black;
+    padding: 10px;
+    border-radius: 15px;
+    border: 2px solid black;
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+    width: 180px;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Estilo para o triângulo da bolha de pensamento */
+#thoughtBubble::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -20px; /* Ajusta a posição para a esquerda do pop-up */
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent transparent  rgba(100, 154, 210, 1);;
+}
+
+/* Animação de embaralhamento */
+@keyframes shuffle {
+    0% { content: "p"; }
+    10% { content: "pl"; }
+    20% { content: "pla"; }
+    30% { content: "plac"; }
+    40% { content: "place"; }
+    50% { content: "placeh"; }
+    60% { content: "placeho"; }
+    70% { content: "placehol"; }
+    80% { content: "placehold"; }
+    90% { content: "placeholde"; }
+    100% { content: "placeholder text"; }
+}
+
+/* Animação para aparecer suavemente */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
